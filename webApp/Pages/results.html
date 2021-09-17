@@ -1,0 +1,44 @@
+<!-- HTML code for "results" page -->
+
+{{ define "head" }}
+<script src="Scripts/results.js"></script>
+{{ end }}
+
+<!-- Templated Nav Bar -->
+{{ define "navbar" }}
+<nav class="navbar navbar-expand-sm navbar-dark">
+    <ul class="navbar-nav">
+        {{ range .P.Tabs }}
+        {{ if .Active }}
+        <li class="nav-item active"><a class="nav-link" href="{{ .Name }}.html">{{ .Bar }}</a></li>
+        {{ else }}
+        <li class="nav-item"><a class="nav-link" href="{{ .Name }}.html">{{ .Bar }}</a></li>
+        {{ end }}
+        {{ end }}
+    </ul>
+</nav>
+{{ end }}
+
+<!-- Templated Main -->
+{{ define "main" }}
+<div class="main">
+    <!-- Create cards for dynamic population-->
+    {{ range .R.Data }}
+    <div class="card">
+        <div class="card-image">
+            {{ range .Images }}
+            <img src="{{ .URL }}" alt="{{ .AltText }}">
+            {{ end }}
+        </div>
+        <div class="card-text">
+            <h2 class="card-title">{{ .Title }}</h2>
+            <p class="card-desc">{{ .ShortDesc }}</p>
+        </div>
+        <!-- Create expand button and call createExpandedParameters(id) -->
+        <div class="card-button">
+            <button onclick="createExpandedParameters('{{ .ID }}')" class="button">Learn More</button>
+        </div>
+    </div>
+    {{ end }}
+</div>
+{{ end }}

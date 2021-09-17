@@ -1,0 +1,62 @@
+<!-- HTML code for "expanded results" page -->
+
+{{ define "head" }}
+{{ end }}
+
+<!-- Templated Nav Bar -->
+{{ define "navbar" }}
+<nav class="navbar navbar-expand-sm navbar-dark">
+    <ul class="navbar-nav">
+        {{ range .P.Tabs }}
+        {{ if .Active }}
+        <li class="nav-item active"><a class="nav-link" href="{{ .Name }}.html">{{ .Bar }}</a></li>
+        {{ else }}
+        <li class="nav-item"><a class="nav-link" href="{{ .Name }}.html">{{ .Bar }}</a></li>
+        {{ end }}
+        {{ end }}
+    </ul>
+</nav>
+{{ end }}
+
+<!-- Templated Main -->
+{{ define "main" }}
+<div class="main">
+
+    <!-- API information display -->
+    {{ range .R.Data }}
+    {{ range .Images }}
+    <img src="{{ .URL }}">
+    {{ end }}
+
+    <h1>{{ .Title }}</h1>
+    <h2>{{ .Location }}</h2>
+    <h4>{{ .SeasonDesc }}</h4>
+    <h4>{{ .Accessability }}</h4>
+    <h4>{{ .PetsDesc }}</h4>
+
+    <div class="hikeDesc">
+        {{ .LongDesc }}
+    </div>
+
+    {{ range .RelatedParks }}
+    <h3>{{ .FullName }}</h3>
+    {{ end }}
+
+    {{ end }}
+
+    <button class="back-btn">Back</button>
+
+    <!-- 
+        When redirecting to the planning page, need some information (to be determined) such as lat/long and trail time (perhaps)
+        When redirecting to the directions page, pass along the name / title
+    -->
+
+    <div class="map-area">
+        <div class="expanded_results_btns">
+            <button class="get_directions_btn" onclick="location.href='directions.html'" type="button">Get
+                Directions</button>
+            <button class="plan_trek_btn" onclick="location.href='planning.html'" type="button">Plan for Trek</button>
+        </div>
+    </div>
+</div>
+{{ end }}

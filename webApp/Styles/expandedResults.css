@@ -1,0 +1,47 @@
+/* This is the CSS styling for the "expanded results" page */
+html, body {
+    background-color: black;
+}
+
+.map-area {
+    background-color: white;
+    position: absolute;
+    left: 40%;
+    top: 10%;
+    height: 800px;
+    width: 1000px;
+}
+
+.expanded_results_btns {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    bottom: 10%;
+    left: 23%;
+    text-align: center;   
+}
+
+.get_directions_btn {
+    font-size: 2vw;
+    border: 2px solid #1ECD97;
+    border-radius: 40px;
+    background: transparent;
+    color: #1ECD97;
+    letter-spacing: 1px;
+    -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+    transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+    margin-right: 25px;
+}
+
+.plan_trek_btn {
+    font-size: 2vw;
+    border: 2px solid #1ECD97;
+    border-radius: 40px;
+    background: transparent;
+    color: #1ECD97;
+    letter-spacing: 1px;
+    -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+    transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+    margin-left: 25px;
+}

@@ -1,0 +1,87 @@
+<!-- HTML code for "search" page -->
+
+{{ define "head" }}
+<script src="Scripts/search.js"></script>
+{{ end }}
+
+<!-- Templated Nav Bar -->
+{{ define "navbar" }}
+<nav class="navbar navbar-expand-sm navbar-dark bg-transparent">
+    <ul class="navbar-nav">
+        {{ range .P.Tabs }}
+        {{ if .Active }}
+        <li class="nav-item active"><a class="nav-link" href="{{ .Name }}.html">{{ .Bar }}</a></li>
+        {{ else }}
+        <li class="nav-item"><a class="nav-link" href="{{ .Name }}.html">{{ .Bar }}</a></li>
+        {{ end }}
+        {{ end }}
+    </ul>
+</nav>
+{{ end }}
+
+<!-- Templated Main -->
+{{ define "main" }}
+<div class="main">
+    <div class="search-page">
+    </div>
+
+    <!-- Search Title -->
+    <p class="search-title">Where do you want to hike?</p>
+    <div class="panel">
+        <form class="search-text">
+            <input type="text" id="search" type="text" placeholder="Austin, TX" />
+        </form>
+
+        <!-- Create search button and call createURLParameters() function onclick -->
+        <button onclick="createURLParameters(
+            document.getElementById('search').value, 
+            document.getElementById('statepark-check').checked,
+            document.getElementById('nationalpark-check').checked, 
+            document.getElementById('intensity-easy').checked, 
+            document.getElementById('intensity-medium').checked, 
+            document.getElementById('intensity-hard').checked, 
+            document.getElementById('search-radius').value)" id="search-btn" class="btn-search" type="button">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path
+                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                </path>
+            </svg>
+        </button>
+
+        <!-- Create advanced option drop down -->
+        <button onclick="myFunction()" class="dropbtn">Advanced Options</button>
+        <div id="myDropdown" class="dropdown-content" style="display:none">
+            <ul class="checkbox-list">
+                <li>Additional Parks:</li>
+                <p>
+                    <a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <input type="checkbox" id="statepark-check"> State Parks
+                    <a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
+                    <input type="checkbox" id="nationalpark-check"> National Parks
+                </p>
+                <li>Intensity:</li>
+                <p>
+                    <a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <input type="checkbox" id="intensity-easy"> Easy
+                    <a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <input type="checkbox" id="intensity-medium"> Medium
+                    <a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <input type="checkbox" id="intensity-hard"> Hard
+                </p>
+                <li>Radius/Distance: <input type="text" id="search-radius" /> </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    var searchBar = document.getElementById('search');
+    searchBar.addEventListener("keydown", function (e) {
+        if (e.code === "Enter") {
+            e.preventDefault();
+            document.getElementById('search-btn').click();
+        }
+    });
+</script>
+{{ end }}

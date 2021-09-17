@@ -1,0 +1,39 @@
+<!-- HTML code for "planning" page -->
+
+{{ define "head" }}
+{{ end }}
+
+<!-- Templated Nav Bar -->
+{{ define "navbar" }}
+<nav class="navbar navbar-expand-sm navbar-dark">
+    <ul class="navbar-nav">
+        {{ range .P.Tabs }}
+        {{ if .Active }}
+        <li class="nav-item active"><a class="nav-link" href="{{ .Name }}.html">{{ .Bar }}</a></li>
+        {{ else }}
+        <li class="nav-item"><a class="nav-link" href="{{ .Name }}.html">{{ .Bar }}</a></li>
+        {{ end }}
+        {{ end }}
+    </ul>
+</nav>
+{{ end }}
+
+<!-- Templated Main -->
+{{ define "main" }}
+<div class="main">
+
+    <button class="back-btn">Back</button>
+    <!--
+        This was just some bootstrap and other html but the point is the "main" html code goes here
+
+        <div class="row">
+            <div class="col" id="left-text">
+                <h1>Welcome</h1>
+            </div>
+
+            <div class="col">
+            </div>
+        </div>
+        -->
+</div>
+{{ end }}

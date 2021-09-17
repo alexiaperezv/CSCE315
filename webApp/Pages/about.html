@@ -1,0 +1,78 @@
+<!-- HTML code for "about" page -->
+
+{{ define "head" }}
+{{ end }}
+
+<!-- Templated Nav Bar -->
+{{ define "navbar" }}
+<nav class="navbar navbar-expand-sm navbar-dark">
+    <ul class="navbar-nav">
+        {{ range .P.Tabs }}
+        {{ if .Active }}
+        <li class="nav-item active"><a class="nav-link" href="{{ .Name }}.html">{{ .Bar }}</a></li>
+        {{ else }}
+        <li class="nav-item"><a class="nav-link" href="{{ .Name }}.html">{{ .Bar }}</a></li>
+        {{ end }}
+        {{ end }}
+    </ul>
+</nav>
+{{ end }}
+
+<!-- Templated Main -->
+{{ define "main" }}
+<div class="main">
+    
+    <!-- Background & Images -->
+    <div class="background">
+    </div>
+    <img class="img1" src="Images/About_Hiking.jfif" alt="Forest Hike">
+    <img class="img2" src="Images/About_Hiking2.jfif" alt="Waterfall Hike">
+    <p class="title">About Us</p>
+    <hr class="title-divider">
+
+    <!-- About Text -->
+    <div class="about-text">
+        <p class="questions">Have you ever wanted to go hiking but didn't know where? Or have you ever been
+            under-prepared
+            for a hike? </p>
+        <br>
+        Well then Hikipedia is the solution for you! Our web application will combine trail, weather, and
+        map APIs to give you detailed descriptions and data about the trail, the weather you might encounter,
+        what clothes and materials to bring, how many calories you will burn, how much water you should drink,
+        and much more to help you plan the perfect trek. <br> <br>
+        Hikipedia is the one stop information hub for everything hiking and exploring related! Utilize our service to
+        plan your next hike with friends and family, all while exploring local culture, food, and activities.
+    </div>
+
+    <!-- FAQ Text -->
+    <p class="faq-title">Frequenty Asked Questions</p>
+    <hr class="faq-divider">
+    <div class="faq-text">
+        <p class="questions">How do I search for a hike around me?</p>
+        You can find hiking trails by clicking on the "Search" page on the
+        navigation bar at the top of this screen or by going to the "Home" page and clicking on "Find Your Hike." In
+        both cases, you will have to type in your desired trail location and hit search to find hikes around it.<br><br>
+
+        <p class="questions">How do I apply filters to my search?</p>
+        Once your have successfully searched for a trail location, you can use the
+        "Filters" button underneath the search bar to filter the trail results by intensity, trail type, distance to the
+        input location, etc.<br><br>
+
+        <p class="questions">How can I see a visual map of a specific trail and find directions to it?</p>
+        To see a map of a specific hiking trail in your search results, simply click on it. That will take you to a
+        trail information page that includes its map and an option to "Get Directions."<br><br>
+
+        <p class="questions">Can I check the weather for a specific trail?</p>
+        Yes! To do this, click on any trail in your search results and you
+        will automatically be taken to a trail information page that includes a map and thorough description of it. Once
+        you are in the trail information page, click on the "Plan for Trek" button, which will take you to a new page
+        where you can see the weather for the next few days at the chosen trail.<br><br>
+
+        <p class="questions">How does the website determine the recommended calorie intake for each trail?</p>
+        Our website uses an algorithm that takes into account a trail's intensity combined with the user's weight to
+        calculate the number of calories said user is expected to burn, and then uses this value to create personalized
+        recommnedations for every user and trail.
+        </p>
+    </div>
+</div>
+{{ end }}

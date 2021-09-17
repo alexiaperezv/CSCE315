@@ -1,0 +1,13 @@
+{{ define "navbar" }}
+    <nav class="navbar navbar-expand-sm navbar-dark">
+        <ul class="navbar-nav">
+            {{ range .Tabs }}
+            {{ if .Active }}
+            <li class="nav-item active"><a class="nav-link" href="{{ .Name }}.html">{{ .Bar }}</a></li>
+            {{ else }}
+            <li class="nav-item"><a class="nav-link" href="{{ .Name }}.html">{{ .Bar }}</a></li>
+            {{ end }}
+            {{ end }}
+        </ul>
+    </nav>
+{{ end }}

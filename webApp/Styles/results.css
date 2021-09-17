@@ -1,0 +1,74 @@
+/* This is the CSS styling for the "results" page */
+body {
+    width: 100vw;
+    height: 100vh;
+    display: black;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    overflow: scroll;
+    font-family: "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
+}
+
+.card {
+    display: grid;
+    left: 35%;
+    margin-bottom: 2vh;
+    grid-template-columns: 320px;
+    grid-template-rows: 210px 210px 80px;
+    grid-template-areas: "image" "text" "button";
+
+    font-family: roboto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    text-align: center;
+    width: 30vw;
+    background-color: black;
+    border: 1px solid white;
+}
+
+.card-image {
+    position: relative;
+    height: 118%;
+    width: 179%;
+    left: 2%;
+}
+
+.card-image img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-text {
+    position: relative;
+    top: 22.5%;
+    height: 100%;
+    width: 179%;
+    color: white;
+}
+
+.card-desc {
+    font-size: auto;
+}
+
+.card-title {
+    color: #1ECD97;
+}
+
+.card-button {
+    position: relative;
+    top: 40%;
+    left: 39%;
+}
+
+.card-button button {
+    background-color: #1ECD97;
+    font-size: 2vh;
+    font-family: "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
+    border-radius: 15vw;
+}
