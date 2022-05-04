@@ -1,22 +1,8 @@
-# [Start Bootstrap - Business Casual](https://startbootstrap.com/theme/business-casual/)
+## Important Note about this Project:
+The personal information shared within this personal website was accurate when the project was completed in the spring of 2021. My personal resume as well as any skills, achievments, and experience included withing this website are NOT going to be kept up to date. If you would like to view updated information about me, please consider visiting my LinkedIn at: https://www.linkedin.com/in/alexia-perezv/
 
-[Business Casual](https://startbootstrap.com/theme/business-casual/) is a multipurpose website theme for [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/). This theme features a landing page, about page, blog page, and a contact page along with various custom styles and components.
 
-## Preview
-
-[![Business Casual Preview](https://assets.startbootstrap.com/img/screenshots/themes/business-casual.png)](https://startbootstrap.github.io/startbootstrap-business-casual/)
-
-**[View Live Preview](https://startbootstrap.github.io/startbootstrap-business-casual/)**
-
-## Status
-
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/StartBootstrap/startbootstrap-business-casual/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/startbootstrap-business-casual.svg)](https://www.npmjs.com/package/startbootstrap-business-casual)
-[![Build Status](https://travis-ci.org/StartBootstrap/startbootstrap-business-casual.svg?branch=master)](https://travis-ci.org/StartBootstrap/startbootstrap-business-casual)
-[![dependencies Status](https://david-dm.org/StartBootstrap/startbootstrap-business-casual/status.svg)](https://david-dm.org/StartBootstrap/startbootstrap-business-casual)
-[![devDependencies Status](https://david-dm.org/StartBootstrap/startbootstrap-business-casual/dev-status.svg)](https://david-dm.org/StartBootstrap/startbootstrap-business-casual?type=dev)
-
-## Download and Installation
+## Download and Installation of Bootstrap Template Used in Project
 
 To begin using this template, choose one of the following options to get started:
 
